@@ -9,6 +9,9 @@ on:
 jobs:
   pull-request:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./ui
     concurrency:
       group: ${{ github.head_ref }}
       cancel-in-progress: true
