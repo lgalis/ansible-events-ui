@@ -22,6 +22,5 @@ jobs:
           node-version: '16'
           cache: 'npm'
           cache-dependency-path: ui/package-lock.json
-      - run: cd ui      
       - run: npm ci
       - run: npm test
