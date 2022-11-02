@@ -14,10 +14,10 @@ jobs:
       cancel-in-progress: true
     steps:
       - uses: actions/checkout@v3
+      - run: cd ui    
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
           cache: 'npm'
-      - run: cd ui    
       - run: npm ci
       - run: npm test
